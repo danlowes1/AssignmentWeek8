@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgotten Heroes - Comments</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="site-body">
+    <div class="page-container">
+        <header class="comments-header">
+            <h1 class="comments-main-title">
+                Comments
+            </h1>
+            <p class="comments-description">
+                Share your thoughts and memories about our forgotten heroes.
+            </p>
+        </header>
+
+        <main class="comments-section">
+            <div class="post-comment-section">
+                <h2 class="section-title">
+                    Post a Comment
+                </h2>
+                <form class="comment-form">
+                    <div class="form-group">
+                        <label for="comment-text" class="form-label">Your Comment</label>
+                        <textarea id="comment-text" name="comment-text" rows="5" required
+                                  class="form-textarea"
+                                  placeholder="Write your comment here..."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="post-button">
+                            Post Comment
+                        </button>
+                        <select id="post-hero-dropdown" class="hero-dropdown">
+                            <option value="">Please select your hero</option>
+                        </select>
+                    </div>
+                </form>
+                <p class="registration-message">
+                    Only registered users can post comments. Please <a href="login.html" class="registration-link">logon or register</a> to participate.
+                </p>
+            </div>
+
+            ---
+
+            <div class="section-title-wrapper">
+                <h2 class="section-title">
+                    Recent Comments
+                </h2>
+                <select id="filter-hero-dropdown" class="hero-dropdown">
+                    <option value="">Filter On: All Heroes</option>
+                </select>
+            </div>
+
+            <div class="comments-table-wrapper">
+                <table id="comments-display" class="comments-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                Comment
+                            </th>
+                            <th scope="col">
+                                Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p class="comment-meta">
+                                    <span class="comment-author">User123</span> on July 25, 2025 <i>Jimmy Glass</i>
+                                </p>
+                                <p class="comment-text">
+                                    "Jimmy Glass's goal was truly iconic! I remember watching it live, pure magic."
+                                </p>
+                                <input type="text" class="editable-task hidden" value="Jimmy Glass's goal was truly iconic! I remember watching it live, pure magic.">
+                            </td>
+                            <td class="task-actions">
+                                <button class="task-btn" data-action="undo" >
+                                    Undo
+                                </button>
+                                <button class="task-btn" data-action="edit">
+                                    Edit
+                                </button>
+                                <button class="task-btn" data-action="delete">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="comment-meta">
+                                    <span class="comment-author">FanOfHeroes</span> on July 24, 2025 <i>Hulk Hogan</i>
+                                </p>
+                                <p class="comment-text">
+                                    "Hulk Hogan will always be my favorite. He inspired a generation of wrestling fans, myself included, brother!"
+                                </p>
+                                <input type="text" class="editable-task hidden" value="Hulk Hogan will always be my favorite. He inspired a generation of wrestling fans, myself included, brother!">
+                            </td>
+                            <td class="task-actions">
+                                <button class="task-btn" data-action="undo" style="display: none;">
+                                    Undo
+                                </button>
+                                <button class="task-btn" data-action="edit">
+                                    Edit
+                                </button>
+                                <button class="task-btn" data-action="delete">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+        </main>
+
+        <div class="back-home-section">
+            <a href="index.html" class="back-home-link">Back to Home</a>
+        </div>
+
+        <footer class="site-footer">
+            &copy; 2025 Forgotten Heroes. All rights reserved.
+        </footer>
+    </div>
+
+    <script src="./assets/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,493 @@
+/* style.css */
+
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f3f4f6; /* Light gray background */
+    color: #1f2937; /* Dark gray text */
+    line-height: 1.5; /* Standard line height for readability */
+}
+
+/* Global Container for pages */
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem; /* Vertical and horizontal padding */
+}
+
+/* Header Section - Common Styles */
+.main-header, .comments-header {
+    width: 100%;
+    max-width: 56rem; /* Max width for content */
+    text-align: center;
+    margin-bottom: 3rem; /* Space below header */
+}
+
+.main-title, .comments-main-title {
+    font-size: 2.25rem; /* Large title font size */
+    font-weight: 800; /* Extra bold font weight */
+    color: #1d4ed8; /* Deep blue color */
+    line-height: 1.25; /* Tighter line height for titles */
+    margin-bottom: 1rem; /* Space below title */
+}
+
+.header-description, .comments-description {
+    font-size: 1.125rem; /* Medium description font size */
+    color: #4b5563; /* Medium gray color */
+}
+
+/* Navigation/Auth Link */
+.auth-nav {
+    width: 100%;
+    max-width: 56rem; /* Max width for navigation */
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    margin-bottom: 2rem; /* Space below navigation */
+}
+
+.auth-button {
+    padding: 0.75rem 1.5rem; /* Padding for button */
+    background-color: #2563eb; /* Blue button background */
+    color: #ffffff; /* White text */
+    font-weight: 600; /* Semi-bold font */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Subtle shadow */
+    transition: background-color 300ms ease-in-out; /* Smooth transition on hover */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.auth-button:hover {
+    background-color: #1d4ed8; /* Darker blue on hover */
+}
+
+/* Heroes List Section - index.html */
+.main-content {
+    width: 100%;
+    max-width: 56rem; /* Max width for main content */
+}
+
+.heroes-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* Single column by default */
+    gap: 1.5rem; /* Gap between grid items */
+}
+
+.hero-card {
+    background-color: #ffffff; /* White card background */
+    border-radius: 0.75rem; /* Rounded corners for cards */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Larger shadow */
+    padding: 1.5rem; /* Padding inside cards */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the start */
+    transition: transform 150ms ease-in-out; /* Smooth scale transition on hover */
+}
+
+.hero-card:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.hero-name {
+    font-size: 1.5rem; /* Hero name font size */
+    font-weight: 700; /* Bold font */
+    color: #111827; /* Dark text */
+    margin-bottom: 0.5rem; /* Space below name */
+}
+
+.hero-link {
+    color: #2563eb; /* Blue link color */
+    text-decoration: none; /* No underline by default */
+}
+
+.hero-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.hero-description {
+    color: #374151; /* Medium dark text */
+    font-size: 1rem; /* Standard font size */
+    line-height: 1.6; /* Good line height for paragraphs */
+}
+
+.comments-link {
+    margin-top: 1rem; /* Space above link */
+    color: #3b82f6; /* Lighter blue link */
+    font-size: 0.875rem; /* Small font size */
+    text-decoration: none; /* No underline by default */
+}
+
+.comments-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Footer Section - Common to all pages */
+.site-footer {
+    width: 100%;
+    max-width: 56rem; /* Max width for footer */
+    text-align: center;
+    margin-top: 3rem; /* Space above footer */
+    padding-top: 2rem; /* Padding above content */
+    border-top: 1px solid #d1d5db; /* Top border */
+    color: #4b5563; /* Medium gray text */
+    font-size: 0.875rem; /* Small font size */
+}
+
+/* Login Page Specific Styles */
+.login-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem; /* Padding for the entire body */
+}
+
+.login-page-container {
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.login-container {
+    max-width: 28rem; /* Max width for the login box */
+    width: 100%; /* Full width up to max-width */
+    background-color: #ffffff; /* White background */
+    padding: 2rem; /* Padding inside the box */
+    border-radius: 0.75rem; /* Rounded corners */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Shadow */
+}
+
+.login-header {
+    text-align: center;
+}
+
+.login-title {
+    font-size: 1.875rem; /* Title font size */
+    font-weight: 800; /* Extra bold */
+    color: #111827; /* Dark text */
+    margin-bottom: 1.5rem; /* Space below title */
+}
+
+.login-description {
+    color: #4b5563; /* Medium gray text */
+    margin-bottom: 2rem; /* Space below description */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Space between form groups */
+}
+
+.form-group {
+    /* Container for label and input */
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem; /* Small font size for labels */
+    font-weight: 500; /* Medium font weight */
+    color: #374151; /* Medium dark text */
+    margin-bottom: 0.25rem; /* Small space below label */
+}
+
+.form-input {
+    appearance: none; /* Remove default browser styling */
+    display: block;
+    width: 100%; /* Full width within its parent */
+    padding: 0.75rem 1rem; /* Padding inside input */
+    border: 1px solid #d1d5db; /* Light gray border */
+    color: #111827; /* Dark text */
+    border-radius: 0.5rem; /* Rounded corners */
+    transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out; /* Smooth transition */
+}
+
+.form-input::placeholder {
+    color: #6b7280; /* Placeholder text color */
+}
+
+.form-input:focus {
+    outline: none; /* Remove outline on focus */
+    border-color: #3b82f6; /* Blue border on focus */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Blue shadow on focus */
+}
+
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-checkbox {
+    height: 1rem; /* Size of checkbox */
+    width: 1rem; /* Size of checkbox */
+    color: #2563eb; /* Blue checkbox color */
+    border-color: #d1d5db; /* Border color */
+    border-radius: 0.25rem; /* Slightly rounded */
+    transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.form-checkbox:focus {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Blue shadow on focus */
+}
+
+.checkbox-label {
+    margin-left: 0.5rem; /* Space next to checkbox */
+    display: block;
+    font-size: 0.875rem; /* Small font size */
+    color: #111827; /* Dark text */
+}
+
+.forgot-password {
+    font-size: 0.875rem; /* Small font size */
+}
+
+.forgot-password-link {
+    font-weight: 500; /* Medium font weight */
+    color: #2563eb; /* Blue link */
+    text-decoration: none;
+}
+
+.forgot-password-link:hover {
+    color: #3b82f6; /* Lighter blue on hover */
+    text-decoration: underline;
+}
+
+.submit-button {
+    display: block; /* Make it a block element */
+    width: 100%; /* Full width within its parent */
+    padding: 0.75rem 1rem; /* Padding for button */
+    border: 1px solid transparent; /* Transparent border */
+    font-size: 1.125rem; /* Medium-large font size */
+    font-weight: 500; /* Medium font weight */
+    border-radius: 0.5rem; /* Rounded corners */
+    color: #ffffff; /* White text */
+    background-color: #2563eb; /* Blue background */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Shadow */
+    transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out; /* Smooth transition */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.submit-button:hover {
+    background-color: #1d4ed8; /* Darker blue on hover */
+}
+
+.submit-button:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5), 0 0 0 4px rgba(59, 130, 246, 0.2); /* Blue focus ring */
+}
+
+.register-section {
+    margin-top: 1.5rem; /* Space above section */
+    text-align: center;
+}
+
+.register-text {
+    font-size: 0.875rem; /* Small font size */
+    color: #4b5563; /* Medium gray text */
+}
+
+.register-link {
+    font-weight: 500; /* Medium font weight */
+    color: #2563eb; /* Blue link */
+    text-decoration: none;
+}
+
+.register-link:hover {
+    color: #3b82f6; /* Lighter blue on hover */
+    text-decoration: underline;
+}
+
+.back-home-section {
+    margin-top: 1.5rem; /* Space above section */
+    text-align: center;
+}
+
+.back-home-link {
+    color: #3b82f6; /* Lighter blue link */
+    font-size: 0.875rem; /* Small font size */
+    text-decoration: none;
+}
+
+.back-home-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Comments Page Specific Styles */
+.comments-section {
+    width: 100%;
+    max-width: 48rem; /* Max width for comments section */
+    background-color: #ffffff; /* White background */
+    padding: 2rem; /* Padding inside */
+    border-radius: 0.75rem; /* Rounded corners */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Shadow */
+    margin-bottom: 2rem; /* Space below section */
+}
+
+.section-title {
+    font-size: 1.5rem; /* Title font size */
+    font-weight: 700; /* Bold */
+    color: #111827; /* Dark text */
+    margin-bottom: 1.5rem; /* Space below title */
+    padding-bottom: 0.75rem; /* Padding below title */
+    border-bottom: 1px solid #e5e7eb; /* Bottom border */
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Space between comments */
+}
+
+.comment-item {
+    background-color: #f9fafb; /* Very light gray background */
+    padding: 1rem; /* Padding inside comment item */
+    border-radius: 0.5rem; /* Rounded corners */
+    border: 1px solid #e5e7eb; /* Light gray border */
+}
+
+.comment-meta {
+    font-size: 0.875rem; /* Small font size */
+    color: #6b7280; /* Medium gray text */
+    margin-bottom: 0.25rem; /* Small space below meta */
+}
+
+.comment-author {
+    font-weight: 600; /* Semi-bold */
+    color: #374151; /* Medium dark text */
+}
+
+.comment-text {
+    color: #1f2937; /* Dark text */
+    line-height: 1.6; /* Good line height */
+}
+
+.post-comment-section {
+    margin-top: 2rem; /* Space above section */
+    padding-top: 1.5rem; /* Padding above content */
+    border-top: 1px solid #e5e7eb; /* Top border */
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between form elements */
+}
+
+.form-textarea {
+    appearance: none; /* Remove default browser styling */
+    display: block;
+    width: 100%; /* Full width */
+    padding: 0.75rem 1rem; /* Padding inside textarea */
+    border: 1px solid #d1d5db; /* Light gray border */
+    color: #111827; /* Dark text */
+    border-radius: 0.5rem; /* Rounded corners */
+    transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.form-textarea::placeholder {
+    color: #6b7280; /* Placeholder text color */
+}
+
+.form-textarea:focus {
+    outline: none; /* Remove outline */
+    border-color: #3b82f6; /* Blue border on focus */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Blue shadow on focus */
+}
+
+.post-button {
+    display: block; /* Make it a block element */
+    width: 100%; /* Full width */
+    padding: 0.75rem 1.5rem; /* Padding for button */
+    border: 1px solid transparent; /* Transparent border */
+    font-size: 1.125rem; /* Medium-large font size */
+    font-weight: 500; /* Medium font weight */
+    border-radius: 0.5rem; /* Rounded corners */
+    color: #ffffff; /* White text */
+    background-color: #2563eb; /* Blue background */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Shadow */
+    transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.post-button:hover {
+    background-color: #1d4ed8; /* Darker blue on hover */
+}
+
+.post-button:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5), 0 0 0 4px rgba(59, 130, 246, 0.2); /* Blue focus ring */
+}
+
+.registration-message {
+    font-size: 0.875rem; /* Small font size */
+    color: #4b5563; /* Medium gray text */
+    margin-top: 1rem; /* Space above message */
+}
+
+.registration-link {
+    color: #2563eb; /* Blue link */
+    text-decoration: none;
+}
+
+.registration-link:hover {
+    color: #3b82f6; /* Lighter blue on hover */
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments (using standard media queries) */
+@media (min-width: 640px) { /* Small screens (sm) */
+    .page-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .header-description {
+        font-size: 1.25rem;
+    }
+    .main-title {
+        font-size: 3rem;
+    }
+    .post-button {
+        width: auto; /* Allow button to shrink on larger screens */
+    }
+    .login-page-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .form-input, .form-textarea {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 768px) { /* Medium screens (md) */
+    .main-title {
+        font-size: 3.75rem;
+    }
+    .heroes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Two columns for heroes */
+    }
+}
+
+@media (min-width: 1024px) { /* Large screens (lg) */
+    .page-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .login-page-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
