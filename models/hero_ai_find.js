@@ -1,3 +1,4 @@
+// models/hero_ai_find.js
 const { Model, DataTypes, Sequelize } = require("sequelize");
 
 const sequelize = require("../config/connection");
@@ -5,7 +6,15 @@ const sequelize = require("../config/connection");
 class Hero_ai_find extends Model {}
 
 Hero_ai_find.init(
-  {
+ {
+    hero_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'hero', 
+        key: 'id'
+      }
+    },
     content: {
       type: DataTypes.TEXT,
       allowNull: false,

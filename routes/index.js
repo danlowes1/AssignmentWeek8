@@ -1,3 +1,4 @@
+// routes/index.js
 const router = require("express").Router();
 
 const postRoutes = require("./post");
@@ -14,7 +15,7 @@ router.get("/api", (req, res) => {
 router.use("/api/posts", postRoutes);
 router.use("/api/heroes", heroRoutes);
 router.use("/api/users", userRoutes);
-router.use("/api/hero_ai_finds", hero_ai_findRoutes);
+router.use("/api/hero_ai_finds", hero_ai_findRoutes);  // ****** check this line
 router.use("/api/hero_ai_urls", hero_ai_urlRoutes);
 
 

@@ -8,50 +8,47 @@
    
 </head>
 <body class="site-body login-body">
-    <div class="login-page-container">
-        <div class="login-container">
-            <div class="login-header">
-                <h2 class="login-title">
-                    Login or Register
-                </h2>
-                <p class="login-description">
-                    Access exclusive content and join the community.
-                </p>
+    <div class="login-container">
+        <div class="login-header">
+            <h2 class="login-title">
+                Login or Register
+            </h2>
+            <p class="login-description">
+                Do you have a hero you want us to research? Join the community.
+            </p>
+        </div>
+        <form id="loginForm" class="login-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="email" class="form-label">Email address</label>
+                <input id="email" name="email" type="email" autocomplete="email" required
+                        class="form-input">
             </div>
-            <form id="loginForm" class="login-form" action="#" method="POST">
-                <div class="form-group">
-                    <label for="email" class="form-label">Email address</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required
-                           class="form-input">
-                </div>
-                <div class="form-group">
-                    <label for="password" class="form-label">Password</label>
-                    <input id="password" name="password" type="password" autocomplete="current-password" required
-                           class="form-input">
-                </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" required
+                        class="form-input">
+            </div>
 
 
-                <div>
-                    <button type="submit" id="loginButton" class="submit-button">
-                        Login
-                    </button>
-                </div>
-            </form>
+            <div>
+                <button type="submit" id="loginButton" class="submit-button">
+                    Login
+                </button>
+            </div>
+        </form>
 
-            <div class="register-section">
-                <p class="register-text">
-                    Don't have an account?
-                    <a href="#" class="register-link">
-                        Register now
-                    </a>
-                </p>
-            </div>
-            <div class="back-home-section">
-                <a href="index.html" class="back-home-link">Back to Home</a>
-            </div>
+        <div class="register-section">
+            <p class="register-text">
+                Don't have an account?
+                <a href="#" class="register-link">
+                    Register now
+                </a>
+            </p>
+        </div>
+        <div class="back-home-section">
+            <a href="index.html" class="back-home-link">Back to Home</a>
         </div>
     </div>
-
     <script src="./assets/script.js"></script>
 </body>
 </html>
